@@ -1,212 +1,94 @@
-body{
-display: flex;
-justify-content: center;
-align-items: center;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
 }
+
 .container {
-    padding: 0%;
-    margin: 0%;
-    height: 43rem;
-    width: 31rem;
-    background-color: black;
+    padding: 0;
+    margin: 0;
+    height: 600px;
+    width: 400px;
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 16.66% 16.66% 16.66% 16.66% 16.66% 16.67%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr repeat(5, 1fr);
+    gap: 10px;
 }
+
 .disPlay {
-    margin: 3%;
+    margin: 20px;
+    padding: 20px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: darkblue;
-    color: aliceblue;
-    grid-row: 1/2;
-    grid-column: 5/1;
+    background-color: #222;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 10px;
+    grid-column: span 4;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
 }
-.cLear {
-    height: 98%;
-    width: 99%;
-    border-radius: 15% 15% 15% 15%;
+
+.button, .buttonC, .buttonDel, .buttonOp, .buttonEq {
+    height: 80px;
+    width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: orange;
-    grid-row: 3/2;
-    grid-column: 3/1;
-}
-.deLete {
-    height: 98%;
-    width: 98%;
+    font-size: 1.5rem;
+    color: #333;
+    background-color: #fff;
+    border: none;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: orange;
-    grid-row: 3/2;
-    grid-column: 4/3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-.deVise {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: orange;
-    grid-row: 3/2;
-    grid-column: 4/5;
+
+.button:hover, .buttonC:hover, .buttonDel:hover, .buttonOp:hover, .buttonEq:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
-.seVen {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    grid-row: 3/4;
-    grid-column: 2/1;
+
+.buttonC, .buttonDel, .buttonOp, .buttonEq {
+    background-color: #ff9500;
+    color: #fff;
 }
-.eigHt {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    grid-row: 3/4;
-    grid-column: 2/3;
+
+.buttonC {
+    border-radius: 10px;
+    grid-column: span 2;
 }
-.nIne {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    grid-row: 3/4;
-    grid-column: 4/3;
+
+.buttonDel {
+    border-radius: 10px;
 }
-.mulTiple {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: orange;
-    grid-row: 3/4;
-    grid-column: 4/5;
+
+.buttonEq {
+    grid-column: span 2;
+    border-radius: 10px;
 }
-.fOur {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    grid-row: 5/4;
-    grid-column: 2/1;
+
+.buttonOp {
+    border-radius: 10px;
+    background-color: #ff3b30;
 }
-.fIve {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    grid-row: 5/4;
-    grid-column: 2/3;
-}
-.sIx {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    grid-row: 5/4;
-    grid-column: 3/4;
-}
-.miNuse {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: orange;
-    grid-row: 5/4;
-    grid-column: 5/4;
-}
-.oNe {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    grid-row: 5/6;
-    grid-column: 2/1;
-}
-.tWo {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    grid-row: 5/6;
-    grid-column: 2/3;
-}
-.tRee {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    grid-row: 5/6;
-    grid-column: 3/4;
-}
-.pLus {
-    height: 98%;
-    width: 98%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: orange;
-    grid-row: 5/6;
-    grid-column: 4/5;
-}
+
 .noThing {
-    height: 98%;
-    width: 98%;
-    border-radius: 10% 10% 10% 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    grid-row: 6/7;
-    grid-column: 4/1;
+    grid-column: span 2;
 }
-.eQual {
-    height: 98%;
-    width: 100%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: orange;
-    grid-row: 6/7;
-    grid-column: 4/5;
+
+.button, .buttonC, .buttonDel, .buttonOp, .buttonEq, .noThing {
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.button:active, .buttonC:active, .buttonDel:active, .buttonOp:active, .buttonEq:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.5);
 }
